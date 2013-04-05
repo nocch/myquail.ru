@@ -1,0 +1,17 @@
+body {
+    background: #000 url(./images/plantation-header-image.jpg) center 0 fixed no-repeat;
+    background-color: #000;
+    background-size: cover;
+}
+#main_content {
+    background: #f0f0f0 url(./images/footer_bg.jpg) center bottom no-repeat;
+    background-size: 100%;
+    padding-bottom: 25%;
+}
+#main_content:before {
+    background: transparent url(111.png) -10% 0 repeat-x;
+}
+.inactive {top: 70em;}
+.active {top:1em;}
+.anchor {margin-top:712em;}
+section {background-image:url(http://niarchive.org/trails/plantation-rewriting-the-story/plantation/theme/plantation-hr.png);}

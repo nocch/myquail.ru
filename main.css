@@ -1,0 +1,632 @@
+/*
+Design by Front Ltd
+http://www.designbyfront.com
+http://twitter.com/designbyfront
+*/
+
+@import url(reset.css); /* Calling Meyer's latest reset which also sets HTML5 block element styles */
+
+body {
+    font-family: "proxima-nova-1","proxima-nova-2", Arial, Helvetica, sans-serif;
+    font-size-adjust: 0.47;
+    font-weight: normal;
+    font-style: normal;
+    /* Prevents Mobile Safari from bumping up font sizes in landscape */
+    -webkit-text-size-adjust: 100%;
+    /*background-size: cover;*/
+    color: #333;
+    line-height: 1.618em;
+    background-color: #f0f0f0;
+}
+::selection {
+    background-color: #000;
+    color: #fff;
+}
+/* Headers */
+h1 {
+    font-family: "proxima-nova-1","proxima-nova-2", Arial, Helvetica, sans-serif;
+    font-size-adjust: 0.47;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.618em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding-bottom: 0.618em;
+}
+h1 a:hover{text-decoration:none;border-bottom:none}
+header {
+    width: 50em;
+    margin: 1.618em auto 0;
+    color: #fff;
+}
+header h1 {
+    width: 11em;
+    font-size: 1.62em;
+    text-align: left;
+    float: left;
+    padding-bottom: 1.62em;
+}
+header h1 span {
+    font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2",Georgia,"Times New Roman",serif;
+    text-transform: capitalize;
+    font-weight: normal;
+    letter-spacing: 0em;
+    font-weight: 400;
+    line-height: 1.1em;
+}
+header h2 { margin-bottom: 2.618em; }
+section h1, aside h1, aside h2 {
+    text-align: center;
+    background: transparent url(../img/header_bg.gif) 0 30% repeat-x;
+}
+section h1 span {
+    background: #F0F0F0;
+    padding: 0 0.5em;
+}
+hgroup h1 { letter-spacing: 0 }
+aside h1 {
+    font-size: 1em;
+    cursor: pointer;
+}
+aside h2 {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    background-position: 0 46%;
+}
+aside h1 span, aside h2 span {
+    background: #fff;
+    padding: 0 1em;
+}
+article header h1 {
+    font-weight: normal;
+    font-size: 2.618em;
+    font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2",Georgia,"Times New Roman",serif;
+    text-transform: none;
+    line-height: 1.3em;
+    float: none;
+    padding-bottom: 1em;
+}
+article header h2 {
+    border: none;
+    text-align: left;
+    color: #fff;
+    font-size: 1.618em;
+    line-height: 1.618em;
+    font-family: "proxima-nova-1","proxima-nova-2", Georgia, serif;
+    font-size-adjust: 0.47;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 0.618em;
+    text-transform: none;
+}
+body header h2 { margin-bottom: 0 }
+header hgroup h1 {
+    line-height: 1.5em;
+    font-weight: bold;
+    padding-bottom: 0.45em;
+    letter-spacing: 0.03em;
+}
+header hgroup h2 {
+    line-height: 1.618em;
+    padding-bottom: 0.809em;
+}
+article header {
+    margin-top: 0;
+    margin-bottom: 2.618em;
+}
+/* Paragraphs and captions */
+a {
+    color: #CC5940;
+    text-decoration: none;
+}
+a:hover {
+    color: #333;
+    border-bottom: 1px solid;
+}
+#footnotes figcaption p {display:block !important}/* JM - Fix for jQuery NextAll not playing ball with HTML5 elements */
+i, em { font-style: italic }
+sup {
+    font-family: "proxima-nova-1","proxima-nova-2", Arial, Helvetica, sans-serif;
+    font-size-adjust: 0.47;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.618em;
+    vertical-align: super;
+}
+sup a { border-bottom: none }
+p {
+    font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2",Georgia,"Times New Roman",serif;
+    margin-bottom: 0.8125em;
+}
+blockquote {margin-bottom:1.62em;}
+blockquote p, section#conclusion blockquote p {
+       font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2",Georgia,"Times New Roman",serif;
+       font-size: 1.618em;
+       line-height: 1.618em;
+       font-weight: bold;
+       margin-bottom:0;
+}
+
+blockquote p:before {
+       content: 'вЂњ';
+       margin-left: -0.55em;
+}
+
+blockquote p:after {
+       content: 'вЂќ';
+}
+
+cite {text-align:right;display:block;padding-top:1em;}
+
+header hgroup h1 {
+       font-weight: normal;
+}
+
+header a {
+       color: #fff;
+}
+figure img { width: 100% }
+nav, figcaption p { font-family:"proxima-nova-1","proxima-nova-2", Arial, Helvetica, sans-serif; font-size-adjust:0.47; font-weight:600; font-style:italic; }
+article > aside ul li {
+    font-size: 0.88em;
+    line-height: 1.62em;
+    font-weight: bold;
+}
+figure {
+    font-family: "proxima-nova-1","proxima-nova-2", Georgia, serif;
+    font-size-adjust: 0.47;
+    font-weight: normal;
+    font-style: italic;
+    border-style: solid;
+    border-width: 0.8125em;
+    border-color: #fff;
+    margin-bottom: 0.6125em;
+    margin-bottom: 2.618em;
+    margin-top: 1.9em;
+    background-color: #fff;
+    -moz-box-shadow: 0.1em 0.1em 0.6em rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0.1em 0.1em 0.6em rgba(0,0,0,0.2);
+    box-shadow: 0.1em 0.1em 0.6em rgba(0,0,0,0.2);
+    z-index: 3;
+}
+figure figcaption .credit {
+    font-family: "proxima-nova-1","proxima-nova-2", Arial, Helvetica, sans-serif;
+    font-size-adjust: 0.47;
+    font-weight: 700;
+    font-style: normal;
+}
+figure:after {
+    content: '';
+    background: transparent url(../img/figure_bg.png) center 0 no-repeat;
+    height: 2em;
+    width: 30em;
+    position: absolute;
+    margin-top: 0.85em;
+    margin-left: -0.9em;
+}
+figure img { width: 100% }
+figure figcaption .credit {
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 0.618em;
+    font-weight: bold;
+    letter-spacing: 0.11em;
+    color: #999;
+    font-size-adjust: 0.47;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.618em;
+    margin-bottom: 1.618em;
+    margin-top: -0.25em;
+}
+figure figcaption, figure figcaption p, cite {
+    font-family: "proxima-nova-1","proxima-nova-2", Georgia, sans-serif;
+    font-size-adjust: 0.47;
+    font-weight: normal;
+    font-style: italic;
+    color: #666;
+    padding-bottom:0.5em;
+}
+figure p, #footnotes li p {
+    font-family: "proxima-nova-1","proxima-nova-2", Arial, Helvetica, sans-serif;
+    font-size-adjust: 0.47;
+    font-weight: normal;
+    font-style: normal;
+    color: #666;
+}
+section#conclusion p {
+    font-family: "proxima-nova-1","proxima-nova-2", Georgia, serif;
+    font-size-adjust: 0.47;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.618em;
+    line-height: 1.618em;
+}
+figure iframe {
+    height: 1.618em;
+    margin-bottom: -0.8125em;
+    margin-left: 23.7em;
+}
+figure a {
+    color: inherit;
+    border-bottom: 1px solid;
+}
+/* Layout */
+nav {display:none} /* For now ... */
+header nav {display:block;padding-bottom:2.62em;}
+header nav img {width:99%;}
+header nav a {color:#fff;}
+header nav a:hover {color:#CC5940;}
+header nav p {margin:0;}
+.wrap {
+    max-width: 50em;
+    padding: 0 1.62em;
+    margin: 0 auto;
+}
+#main_content {
+    background-size: 100%;
+    padding-top: 2.62em;
+    clear: both;
+    overflow: hidden;
+}
+#main_content:before {
+    height: 11px;
+    width: 100%;
+    display: block;
+    content: '';
+    position: absolute;
+    margin-top: -3.3em;
+    z-index: 1;
+}
+nav {float:left;width:19em;margin-top:-2.62em;}
+hgroup {float:right;width:30em;}
+#print_key { display: none }
+header img { width: 100% }
+section {
+    float: right;
+    width: 100;
+}
+.wrap > aside {
+    width: 20.541em;
+    z-index: 2;
+}
+aside #location {
+    padding: 1em;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+nav ol li {
+    list-style: lower-roman;
+    color: #fff;
+    border-top: 1px solid #DDD;
+    padding: 0.5em;
+    list-style-position:inside;
+    font-family: "proxima-nova-1","proxima-nova-2", Arial, Helvetica, sans-serif;
+    font-size-adjust: 0.47;
+    font-weight: normal;
+    font-style: italic;
+}
+nav ol li:last-child {border-bottom: 1px solid #DDD;}
+nav ol {
+    margin-top: 1.618em;
+    margin-right: 1.62em;
+}
+.inactive {
+    position: absolute;
+    /*margin-top: 0em;
+    margin-top: -37em;*/
+    top:36em;
+}
+.anchor {position:absolute !important;}
+.active {
+    position: fixed;
+    /*top: 38em;*/
+    top:1em;
+}
+#map_links li:before, #print_this_map a:before {
+    color: #CC5940;
+    content: 'В» ';
+}
+#map_thumbnails a {
+    margin: 0.5em 0.9em 0.5em 0;
+    border: 1px solid #999;
+    display: block;
+    float: left;
+    line-height: 0em;
+}
+#map_thumbnails img {
+    width: 3.5em;
+    height: 3.5em;
+}
+#map_canvas {
+    width: 100%;
+    height: 18.571em;
+    margin-bottom: 1em;
+}
+.connect_widget td.connect_widget_vertical_center { text-shadow: 1px 1px 1px transparent }
+aside { font-size: 0.875em;}
+section:after {
+    /* content: url(img/wave-divider.png); */
+    width: 4em;
+    text-align: center;
+}
+section {
+    background: transparent url(../img/salmon/theme/hr.gif) center bottom no-repeat;
+    margin-bottom: 2em;
+    padding-bottom: 0;
+}
+section#footnotes {background:none;}
+section#conclusion {
+    clear: both;
+    width: 30em;
+    float: right;
+}
+footer {
+    clear: both;
+    text-align: center;
+    margin-bottom: 2.618em;
+}
+footer h1 {
+    letter-spacing: 0em;
+    font-weight: normal;
+    text-transform: capitalize;
+    font-size: 2.618em;
+    font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2",Georgia,"Times New Roman",serif;
+}
+footer p {
+    font-size: 1.618em;
+    line-height: 1.618em;
+    font-family: "proxima-nova-1","proxima-nova-2", Arial, Helvetica, sans-serif;
+    font-size-adjust: 0.47;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0.618em auto;
+    width: 20em;
+}
+a.footnote-index {color:#333;}
+a.footnote-index sup {color:#CC5940;}
+hr {
+    background: transparent url(../img/hr.gif) center center no-repeat;
+    padding: 2.62em 0;
+    border: none;
+}
+footer ul#supporters li {
+	float: left;
+	width: 23%;
+	text-align: center;
+	margin-right: 2%;
+}
+footer ul#supporters li img { max-width: 100% }
+footer #supporters li a {border:none}
+footer ul#supporters li.copyright {
+    font-size: 0.618em;
+    letter-spacing: 0.11em;
+    text-align: center;
+    line-height: 1.618em;
+    clear:both;
+    float:none;
+    max-width:100%;
+    margin:0 auto;
+    width:40em;
+}
+footer a { border-bottom: 0.1em solid }
+#conclusion p:last-child { margin-bottom: 0 }
+/* Footnotes */
+#footnotes ul li h1 {
+    font-style: italic;
+    font-weight: normal;
+    padding-bottom:0;
+}
+#footnotes ul li { color: #666;border-bottom: 1px solid #CCC;padding: 0.5em; }
+#footnotes ul li:last-child {border:none;}
+#decline, #conclusion, #footnotes { padding-bottom: 2.618em }
+a.footnote-index {
+    color: inherit;
+    border-style: dotted;
+}
+a.footnote-index sup { color: #cc5940 }
+figure footnote-index.a { border-style: none }
+a.footnote-index:hover {
+    border-bottom: 1px dotted;
+    color: #cc5940;
+}
+#footnotes ul { list-style-type: none }
+#footnotes ul li h1 {
+    font-family: "proxima-nova-1","proxima-nova-2", Georgia, serif;
+    font-size-adjust: 0.47;
+    font-weight: normal;
+    font-style: italic;
+}
+section#footnotes li h1 {
+    text-align: left;
+    text-transform: none;
+    letter-spacing: 0em;
+    background: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+section#footnotes li h1.selected:after { content: 'Hide' }
+section#footnotes li h1:hover:after {
+    background: #777;
+    color: #f0f0f0;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    border: 1px solid #555;
+}
+section#footnotes li h1:after {
+    content: 'Show';
+    background: #e4e4e4;
+    font-style: normal;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+    text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+    text-transform: uppercase;
+    padding: 0.3em;
+    border: 1px solid #999;
+    color: #888;
+    font-size: 0.62em;
+    margin-left: 1em;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    width: 3.5em;
+    display: inline-block;
+    padding: 0 0.6em;
+    text-align: center;
+    line-height: 1.8em;
+}
+section#footnotes li h1 {
+    text-align: left;
+    text-transform: none;
+    letter-spacing: 0em;
+    background: none;
+    font-size: 1em;
+}
+section#footnotes li h1:after {
+    letter-spacing: 0.11em;
+    cursor: pointer;
+    content: 'Show';
+    background: #e4e4e4;
+    font-style: normal;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+    text-transform: uppercase;
+    padding: 0.3em;
+    border: 1px solid #999;
+    color: #888;
+    font-size: 0.62em;
+    margin-left: 1em;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.footnote_top {
+    position: absolute;
+    margin-left: -1.4em;
+    padding: 0px;
+}
+#footnotes ul {
+    list-style-type: decimal;
+    list-style-type: none;
+}
+a.footnote_top {
+    line-height: 1.618em;
+    margin-top: -0.4em;
+    text-align: right;
+    width: 1.618em;
+    margin-left: -1.9em;
+}
+footer h2 {
+text-align: center;
+background: transparent url(../img/header_bg.gif) 0 50% repeat-x;
+text-transform: uppercase;
+font-family:"proxima-nova-1","proxima-nova-2", Arial, Helvetica, sans-serif;
+}
+footer h2 span {padding:0.5em;background:#f0f0f0; font-weight: 700; letter-spacing:0.1em}
+ul#trails {
+border-bottom:1px solid #ccc;
+overflow: hidden;
+padding-bottom: 1em;
+}
+#trails li {
+float:right;
+font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2",Georgia,"Times New Roman",serif;
+}
+#trails li:first-child {
+float:left;
+}
+footer #trails li a {text-decoration:none;border:none;}
+#trails li a:hover {text-decoration:underline}
+#trails li a:after {content:' В»';}
+#trails li:first-child a:before {content:'В« ';}
+#trails li:first-child a:after {content:'';}
+/* Forms */
+form {
+    float: right;
+}
+#search_box {
+    border: 1px solid #ccc;
+    background:#fff;
+    width: 12.5em;
+    padding: 0.2em;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px transparent;
+}
+#search_box input#keywords {
+color: #333;
+border:0;
+width: 12.6em;
+padding-left: 0.4em;
+}
+#search_box input#keywords:focus {outline:none}
+legend {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+img.print {display:none}
+aside:before {content: ''; position:absolute; left:99.9%; top:20%;background:transparent url(../img/dialog_arrow.png) 0 0 no-repeat;width:17px;height:33px;}
+/*    Layout for reading in smaller contexts for example, mobile    */
+@media only screen and (max-width: 54em) { 
+    header, .wrap { width: 32em }
+    nav {margin-top:0}
+    h2 { font-size: 6.85em }
+    footer h2 { font-size: 1em }
+    header hgroup h2:last-child {padding-bottom:2.62em}
+    article header, section, footer, section#conclusion {
+        clear: none;
+        float: none;
+        margin: 0 auto;
+    }
+    section {padding-bottom:1em;margin-bottom:2em;}
+    .inactive, .active {
+        position: static;
+        top: auto;
+        margin-top: auto;
+    }
+    .wrap > aside, nav, hgroup { float:none; width: 100% }
+    footer, .wrap > aside { margin-top: 2.62em }
+    #main_content { padding-bottom: 12em !important; }
+    aside::before {display:none}
+    .anchor {position:static !important}
+    nav ol {margin-right:0;}
+}
+@media only screen and (max-width: 34em) { 
+    header, article header, .wrap, header hgroup h1 { width: 90% }
+    article header h1 {
+        font-size: 1.62em;
+        margin-left: 0;
+    }
+    article header, section, footer, section#conclusion, form, header h1 {
+        clear: none;
+        float: none;
+        margin: 0 auto;
+        width: auto;
+    }
+    header hgroup h2 { font-size: 1em }
+    figcaption iframe { margin-left: auto }
+    .inactive, .active {
+        position: static;
+        top: auto;
+        margin-top: auto;
+    }
+    .wrap > aside, footer p { width: 100% }
+    footer, .wrap > aside { margin-top: 2.62em }
+    #main_content { padding-bottom: 29em }
+    figure::after { display: none }
+    form {
+        width: 100%;
+        margin-bottom: 1.618em;
+    }
+    header h1 { padding-bottom: 0.618em }
+    article { overflow: hidden }
+    .wrap { padding: 0 }
+    #footnotes ul { margin-left:1em }
+    footer ul#supporters li {float:none;width:75%;margin:0 auto;}
+    #trails li {float:none !important}
+}
