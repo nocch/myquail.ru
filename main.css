@@ -253,6 +253,16 @@ figure a {
     color: inherit;
     border-bottom: 1px solid;
 }
+figure #disqus_thread
+{
+    font-family: "proxima-nova-1","proxima-nova-2", Georgia, sans-serif;
+    font-size-adjust: 0.47;
+    font-weight: normal;
+    font-style: italic;
+    color: #666;
+    padding-bottom:0.5em;
+}
+
 /* Layout */
 nav {display:none} /* For now ... */
 header nav {display:block;padding-bottom:2.62em;}
