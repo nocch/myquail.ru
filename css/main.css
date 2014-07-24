@@ -47,7 +47,12 @@ a {
     a:hover {
       text-decoration: none;
       color: #ff5302; }
-
+element.style {
+}
+#header .logo-text span
+{
+      
+      color: #945327; }
 .sectiontableheader {
   font-weight: bold;
   border-bottom: 1px solid #cccccc; }
