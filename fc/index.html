@@ -133,7 +133,41 @@
           <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12"><a href="#" class="footermenu">FAQ</a></div>
           <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12"><a href="#" class="footermenu">Предложить&nbsp;новость</a></div>
           <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12"><a href="#" class="footermenu">Подписка</a></div>
-          <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12"><a href="#" class="footermenu">Регистрация</a></div>
+          <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12"><a href="#" onclick="openbox('reg_bg'); return false" class="footermenu">Регистрация
+              <div id="reg_bg" style="display: none;">
+                <div id="reg">
+                  <div class="log_in">
+                    <div class="registration">Регистрация</div>
+                    <div class="reg_border">&nbsp; </div>
+                    <div class="log">Вход</div>
+                    <div class="with_web">&nbsp; С помощью аккаунта в соцсетях</div>
+                    <div class="social_blocks">&nbsp;<a href="#" class="social facebook-news">&nbsp;    </a><a href="#" class="social tw-news">&nbsp;</a><a href="#" class="social vk-news">&nbsp;</a></div>
+                    <div class="reg_redborder">&nbsp; </div>
+                    <div class="reg_else">еще</div>
+                    <div class="reg_redborder">&nbsp; </div>
+                    <div class="regform">
+                      <form method="post" role="form" class="navbar-form">
+                        <div class="form-group">
+                          <div class="input-width">
+                            <div class="width-setter">
+                              <input type="name" name="name" size="44" style="height:50px" placeholder="Ваше имя" required class="form-control">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="input-width">
+                            <div class="width-setter">
+                              <input type="password" name="name" size="44" style="height:50px" placeholder="Ваше имя" required class="form-control">
+                            </div>
+                          </div>
+                        </div>
+                        <p></p>
+                        <button type="submit" class="btn btn-default">Зарегистрироваться</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div></a></div>
         </div>
       </div>
     </nav>
@@ -208,7 +242,10 @@
   <!--mininews.jade-->
   <script>
     xtag.register('news-mini', {
-        content: '<a class="media grayli"><div class="promo_centr_img"><img class="mainimg" src="../assets/img/img004.jpg"></div><div class="text_promo"><span class="insertplace">Пассажиров, держащих двери вагонов в московском метро будут штрафовать<span></div></a>',           
+        content: '<a class="media grayli">'+
+                    '<div class="promo_centr_img"><img class="mainimg" src="../assets/img/img004.jpg"></div>'+
+                    '<div class="text_promo"><span class="insertplace">Пассажиров, держащих двери вагонов в московском метро будут штрафовать<span></div>'+
+                '</a>',           
             accessors: {
                 text: {
                     attribute:{},
@@ -231,7 +268,15 @@
   <!--middlenews.jade-->
   <script>
     xtag.register('news-middle', {
-        content: '<a href="#" class="medium_promo"><div class="hoverpicture">&nbsp;    </div><div class="promo_img"><img class="mainimg" src="../assets/img/img002.jpg" class="img-responsive"></div><div class="text-medium"><span class="insertplace">Выставка по реставрации культурного наследия<span></div></a>',           
+        content: '<a href="#" class="medium_promo">' +
+                        '<div class="hoverpicture">&nbsp;    </div>' +
+                        '<div class="promo_img">' +
+                            '<img class="mainimg" src="../assets/img/img002.jpg" class="img-responsive">' +
+                        '</div>' +
+                        '<div class="text-medium">' +
+                            '<span class="insertplace">Выставка по реставрации культурного наследия<span>' +
+                        '</div>' +
+                    '</a>',
             accessors: {
                 text: {
                     attribute:{},
@@ -254,7 +299,21 @@
   <!--bignews.jade-->
   <script>
     xtag.register('news-big', {
-        content: '<a href="#" class="big_img"><div class="text_positoin"><div class="hoverpicture">&nbsp;</div><img src="../assets/img/img001.jpg" class="img-responsive"/><div class="text-container"><div class="nul-container">&nbsp;</div><div class="text"><span class="insertplace">9999999<span></div><div class="title_inner"><div class="date">11 няняня 2015</div><img euesrc="../assets/img/0.png" class="eue"><div class="viewers">120</div></div></div></div></a>',           
+        content:    '<a href="#" class="big_img">'+
+                       '<div class="text_positoin">'+
+                          '<div class="hoverpicture">&nbsp;</div>'+
+                          '<img src="../assets/img/img001.jpg" class="img-responsive"/>'+
+                          '<div class="text-container">'+
+                             '<div class="nul-container">&nbsp;</div>'+
+                             '<div class="text"><span class="insertplace">9999999<span></div>'+
+                             '<div class="title_inner">'+
+                                '<div class="date">11 няняня 2015</div>'+
+                                '<img euesrc="../assets/img/0.png" class="eue">'+
+                                '<div class="viewers">120</div>'+
+                             '</div>'+
+                          '</div>'+
+                       '</div>'+
+                    '</a>',
             accessors: {
                 text: {
                     attribute:{},
@@ -292,10 +351,89 @@
   </script>
   <!--end bignew
   -->
+  <!--comment.jade-->
+  <script>
+    xtag.register('news-comment', {
+        content: '<div class="comment-container">' +
+                       '<div class="user-info">00Крутой Чувак</div>' +
+                       '<div class="user-text">' +
+                          '<p><span class="commenttext">00Правительство действительно спайсами заправляет.</span></p>' +
+                       '</div>' +
+                       '<div class="otherinfo-comment">' +
+                          '<div class="time_published">00Сегодня в 17:15</div>' +
+                          '<a href="#" class="commentrating-plus"></a>' +
+                          '<div class="comment-rating">00675</div>' +
+                          '<a href="#" class="commentrating-minus"></a><a href="#" class="reply">00Ответить</a>' +
+                       '</div>' +
+                    '</div>',
+            accessors: {
+                text: {
+                    attribute:{},
+                    set: function(value){
+                    this.querySelector('.commenttext').innerHTML = value
+                    }
+                },
+                nameuser: {
+                 attribute:{},
+                    set: function(value){
+                    this.querySelector('.user-info').innerHTML = value
+                    }
+                },
+                date: {
+                 attribute:{},
+                    set: function(value){
+                    this.querySelector('.time_published').innerHTML = value
+                    }
+                },
+                rating: {
+                 attribute:{},
+                    set: function(value){
+                    this.querySelector('.comment-rating').innerHTML = value
+                    }
+                },
+                reply: {
+                 attribute:{},
+                    set: function(value){
+                    this.querySelector('.reply').innerHTML = value
+                    }
+                },
+                href: {
+                    attribute: { selector: '.reply'}
+                },
+                minushref: {
+                    attribute:{},
+                    set: function(value){
+                    this.querySelector('.commentrating-minus').setAttribute('href', value)
+                    }
+                },
+                plushref: {
+                    attribute:{},
+                    set: function(value){
+                    this.querySelector('.commentrating-plus').setAttribute('href', value)
+                    }
+                },
+                
+            }
+    
+        });
+  </script>
+  <!--end comment
+  -->
   <!--titlenews.jade-->
   <script>
     xtag.register('news-title', {
-        content: '<div class="big_img"><div class="text_positoin"><div class="hoverpicture">&nbsp;</div><img src="../assets/img/img014.jpg" class="titleimg"/><div class="titletext-container"><div class="titletext"><div class="titleinnertext"><span class="titleinsertplace">00<span></div><div class="titletitle_inner"><div class="titledate">00</div><img euesrc="../assets/img/0.png" class="titleeue"><div class="titleviewers">00</div></div></div></div></div>',           
+        content: '<div class="titletext-container">'+
+                    '<img src="../assets/img/img014.jpg" class="titleimg"/>'+
+                    '<div class="outtitletext">'+
+                        '<div class="titletext">'+
+                            '<div class="titleinnertext"><span class="titleinsertplace">00<span></div>'+
+                            '<div class="titletitle_inner">'+
+                                '<div class="titledate">00</div>'+
+                                '<img euesrc="../assets/img/0.png" class="titleeue">'+
+                                '<div class="titleviewers">00</div>'+
+                            '</div>'+
+                        '</div>'+
+                    '</div>',
             accessors: {
                 text: {
                     attribute:{},
@@ -329,5 +467,18 @@
   </script>
   <!--end titlenews
   -->
+  <!--reg.jade-->
+  <script>
+    function openbox(id){
+        display = document.getElementById(id).style.display;
+        if(display=='none'){
+           document.getElementById(id).style.display='block';
+        }else{
+           document.getElementById(id).style.display='none';
+        }
+    
+    }
+  </script>
+  <!--end reg.jade-->
 </html>
 <!--index.jade-->
