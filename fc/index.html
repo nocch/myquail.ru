@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300|Lora|Roboto:400,500" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/pack.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--script(src='assets/js/dialog-polyfill.js')-->
   </head>
   <!--end head.jade-->
   <body>
@@ -132,40 +134,75 @@
           <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12"><a href="#" class="footermenu">Контакты</a></div>
           <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12"><a href="#" class="footermenu">FAQ</a></div>
           <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12"><a href="#" class="footermenu">Предложить&nbsp;новость</a></div>
-          <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12"><a href="#" class="footermenu">Подписка</a></div>
-          <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12"><a href="#" onclick="openbox('reg_bg'); return false" class="footermenu">Регистрация
-              <div id="reg_bg" style="display: none;">
-                <div id="reg">
-                  <div class="log_in">
-                    <div class="registration">Регистрация</div>
-                    <div class="reg_border">&nbsp; </div>
-                    <div class="log">Вход</div>
-                    <div class="with_web">&nbsp; С помощью аккаунта в соцсетях</div>
-                    <div class="social_blocks">&nbsp;<a href="#" class="social facebook-news">&nbsp;    </a><a href="#" class="social tw-news">&nbsp;</a><a href="#" class="social vk-news">&nbsp;</a></div>
-                    <div class="reg_redborder">&nbsp; </div>
-                    <div class="reg_else">еще</div>
-                    <div class="reg_redborder">&nbsp; </div>
-                    <div class="regform">
-                      <form method="post" role="form" class="navbar-form">
-                        <div class="form-group">
-                          <div class="input-width">
-                            <div class="width-setter">
-                              <input type="name" name="name" size="44" style="height:50px" placeholder="Ваше имя" required class="form-control">
+          <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12"><a href="#" class="footermenu">Подписка    </a></div>
+          <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12"><a href="javascript:PopUpShow()" class="footermenu">Регистрация
+              <div id="outstyle">&nbsp;
+                <div id="popup1" class="b-popup">
+                  <div class="b-popup-content">
+                    <div href="#" class="parent-block"><a href="javascript:PopUpTab()" class="btn registration">Регистрация</a><a href="javascript:PopUpTab()" class="btn log">Вход</a>
+                      <div id="reg">
+                        <div class="with_web">С помощью аккаунта в соцсетях</div>
+                        <div class="social_blocks social-reg">&nbsp;<a href="#" class="social facebook-popup">&nbsp;    </a><a href="#" class="social tw-popup">&nbsp;</a><a href="#" class="social vk-popup">&nbsp;</a><a href="#" class="social in-popup">&nbsp;</a></div>
+                        <div class="reg_redborder">&nbsp; </div>
+                        <div class="reg_else"> или</div>
+                        <div class="reg_redborder">&nbsp; </div>
+                        <div class="regform">
+                          <form method="post" role="form" class="navbar-form">
+                            <div class="form-group">
+                              <div class="input-popupwidth">
+                                <div class="width-popupsetter">
+                                  <input type="name" name="name" size="44" style="height:50px" placeholder="Ваше имя" required class="form-control">
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <div class="input-width">
-                            <div class="width-setter">
-                              <input type="password" name="name" size="44" style="height:50px" placeholder="Ваше имя" required class="form-control">
+                            <div class="form-group">
+                              <div class="input-popupwidth">
+                                <div class="width-popupsetter">
+                                  <input type="e-mail" name="name" size="44" style="height:50px" placeholder="E-mail" required class="form-control">
+                                </div>
+                              </div>
                             </div>
-                          </div>
+                            <div class="form-group">
+                              <div class="input-popupwidth">
+                                <div class="width-popupsetter">
+                                  <input type="password" name="name" size="44" style="height:50px" placeholder="Пароль" required class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                            <p></p>
+                            <button type="submit" class="btn btn-reg">Зарегистрироваться</button>
+                          </form>
                         </div>
-                        <p></p>
-                        <button type="submit" class="btn btn-default">Зарегистрироваться</button>
-                      </form>
+                      </div>
+                      <div id="log"> 
+                        <div class="with_web">С помощью аккаунта в соцсетях</div>
+                        <div class="social_blocks social-reg">&nbsp;<a href="#" class="social facebook-popup">&nbsp;    </a><a href="#" class="social tw-popup">&nbsp;</a><a href="#" class="social vk-popup">&nbsp;</a><a href="#" class="social in-popup">&nbsp;</a></div>
+                        <div class="reg_redborder">&nbsp; </div>
+                        <div class="reg_else"> или</div>
+                        <div class="reg_redborder">&nbsp; </div>
+                        <div class="regform">
+                          <form method="post" role="form" class="navbar-form">
+                            <div class="form-group">
+                              <div class="input-popupwidth">
+                                <div class="width-popupsetter">
+                                  <input type="name" name="name" size="44" style="height:50px" placeholder="Ваше имя" required class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="input-popupwidth">
+                                <div class="width-popupsetter">
+                                  <input type="password" name="name" size="44" style="height:50px" placeholder="Пароль" required class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                            <p></p>
+                            <button type="submit" class="btn btn-reg">Зарегистрироваться</button>
+                          </form>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </div><a id="hidepopup" href="javascript:PopUpHide()">&otimes;   </a>
                 </div>
               </div></a></div>
         </div>
@@ -469,16 +506,22 @@
   -->
   <!--reg.jade-->
   <script>
-    function openbox(id){
-        display = document.getElementById(id).style.display;
-        if(display=='none'){
-           document.getElementById(id).style.display='block';
-        }else{
-           document.getElementById(id).style.display='none';
-        }
-    
+    $(document).ready(function(){
+        PopUpHide();
+    });
+    function PopUpShow(){
+        $("#popup1").show();
     }
+    function PopUpHide(){
+        $("#popup1").hide();
+    }
+    function PopUpTab(){
+        $(".parent-block").toggleClass('active');
+    }
+    
   </script>
   <!--end reg.jade-->
+  <!--include ./reg.jade-->
+  <!--include ./tab.jade-->
 </html>
 <!--index.jade-->
