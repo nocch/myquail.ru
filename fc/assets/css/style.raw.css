@@ -1645,10 +1645,10 @@ hr {
   }
 }
 
-* {
+/* {
     outline: 1px solid blue;
 }
-
+*/
 a {
     cursor: pointer;
 }
@@ -2314,8 +2314,12 @@ footer {
     display: block;
     width: 100%;
     background-color: #303030;
+     position: relative;
+    z-index: 1;
 }
 a.footermenu {
+    position: relative;
+    z-index: 10;
     margin: 10px auto;
     text-align: center;
     text-decoration: none;
@@ -2351,6 +2355,7 @@ a.footermenu:hover {
     background-position: -52px 0;
 }
 a.footertext {
+    z-index: 10;
     margin: 10px auto;
     text-align: center;
     text-decoration: none;
@@ -2745,24 +2750,8 @@ ul.media-list {
     background:#f6f6f6;
     resize: none
 }
-.btn-default {
-    width:180px;
-    height:36px;
-    font-family: 'Roboto Medium', sans-serif;
-    text-transform: uppercase;
-    color: #fff;
-    background:#ff5722;
-    border: none;
-    margin-bottom: 40px;
-    
-}
-.btn-default:hover {
-    background:#d0471c;
-}
-::-webkit-input-placeholder {padding:0 0 0 20px}
-::-moz-placeholder          {padding:0 0 0 20px;}/
-:-moz-placeholder           {padding:0 0 0 20px;}
-:-ms-input-placeholder      {padding:0 0 0 20px;}
+
+
 /**
  * +++++++++++++++++++++++++++
 */
@@ -2793,7 +2782,7 @@ ul.media-list {
     }
 /**
  * +++++++++++++++++++++++++++
-*/
+
 
 #reg {
     z-index: 100;
@@ -2813,59 +2802,242 @@ ul.media-list {
     justify-content: center;
     align-items: center;
 }
+
+*/
+.log {
+    color: #fff;
+    width: 39%;
+    height: 55px;
+    font-family: 'Roboto Medium', sans-serif;
+    text-transform: none;
+    text-decoration: none;
+    text-align: right;
+    font-size: 28px;
+    float: left;
+    margin-bottom: 40px;
+}
+
 .log_in {
-    z-index: 110;
+    z-index: 510;
     width: 362px;
     height: 504px;
-
     display: block;
     box-sizing: content-box;
 }
 .registration {
-    width: 49%;
-    height: 50px;
+    width: 59%;
+    height: 55px;
     font-family: 'Roboto Medium', sans-serif;
     text-transform: none;
     text-decoration: none;
     float: left;
-    margin: 0 auto;
-    font-size: 22px;
+    text-align: left;
+    font-size: 28px;
     color: red;
-}
-.reg_border {
-    float: left;
-    width: 1px;
-    height: 50px;
-    border-right: 1px solid #000;
+    border-right: 1px solid #ccc;
+    margin-bottom: 40px;
 }
 
-.log{
-    width: 49%;
-    height: 50px;
-    font-family: 'Roboto Medium', sans-serif;
-    text-transform: none;
-    text-decoration: none;
-    font-size: 22px;
+.reg_else {
+    width: 20%;
     float: left;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 40px;
 }
+.reg_redborder {
+    float: left;
+    width: 40%;
+    height: 10px;
+    border-bottom: 1px solid red;
+}
+.reg_redborder-right {
+    float: left;
+    width: 40%;
+    height: 10px;
+    border-bottom: 1px solid red;
+   
+}
+
+
 .with_web {
-    font-family: 'Roboto Regular', serif;
+    display: block;
+    font-family: 'Roboto regular', sans-serif;
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     text-transform: none;
     text-decoration: none;
+    text-align: center;
+    height: 45px;
+    margin-bottom: 100px;
+    
 }
+.social-reg {
+    height: 110px;
+    padding-bottom: 40px;
+}
+.facebook-popup {
+    width: 52px;
+    height: 53px;
+    background-image: url('../img/social.png');
+    background-position: -104px 0;
+}
+.tw-popup {
+    width: 52px;
+    height: 53px;
+    background-image: url('../img/social.png');
+    background-position: 0 0;
+}
+.vk-popup {
+    width: 52px;
+    height: 53px;
+    background-image: url('../img/social.png');
+    background-position: -52px 0;
+}
+.in-popup {
+    width: 52px;
+    height: 53px;
+    background-image: url('../img/social-in.png');
+}
+ .regform input {
+    width: 100%;
+    background-color: inherit;
+    height: 53px;
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:16px;
+    color:#000;
+    border:1px solid #ccc;
+
+ }
+.btn-reg {
+    width:100%;
+    height: 53px;
+    font-family: 'Roboto Medium', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    background:#ff5722;
+    border: none;
+    margin-bottom: 40px;
+    font-size: 20px;
+    
+}
+.btn-reg:hover {
+    background: red;
+}
+::-webkit-input-placeholder {padding:0 0 0 20px}
+::-moz-placeholder          {padding:0 0 0 20px;}/
+:-moz-placeholder           {padding:0 0 0 20px;}
+:-ms-input-placeholder      {padding:0 0 0 20px;}
 /**
-.with_web &nbsp; 
-.social_blocks &nbsp;
-        a.social.facebook-news(href='#') &nbsp;    
-        a.social.tw-news(href='#') &nbsp;
-        a.social.vk-news(href='#') &nbsp;
-.reg_redborder &nbsp; 
-.reg_else еще
-.reg_redborder &nbsp; 
+
+
+dialog {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
 */
 
+.b-container{
+    z-index: 10;
+    display: block;
+}
+.b-popup{
+    z-index: 400;
+    position: fixed;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    display: flex;
+    flex-direction: row; 
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: url('../img/bg_reg.png');
+    background-repeat: repeat-x repeat-y;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.b-popup.b-popup-content{
+    z-index: 510;
+    width: 362px;
+    height: 504px;
+    display: block;
+    box-sizing: content-box;
+}
+.active #reg {
+    display: none;
+}
+#reg {
+    display: block;
+}
+.active #log {
+    display: block;
+}
+#log {
+    display: none;
+}
+
+#outstyle{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    
+}
+#hidepopup {
+    color: red;
+    font-size: 40px;
+    position: absolute;
+    top: 40px;
+    right: 100px;
+}
+
+
+
+
+
+a.btn.registration, a.btn.log {
+    text-decoration: none;
+}
+
+
+
+
+.active a.btn.registration {
+    color: #fff;
+}
+a.btn.registration {
+    color: red;
+    transition: all .3s ease .15s;
+}
+a.btn.registration:hover {
+        opacity: 0.4;
+}
+
+
+
+.active a.btn.log {
+    color: red;
+}
+a.btn.log {
+    color: #fff;
+    text-decoration: none;
+    transition: all .1s ease .15s;
+}
+a.btn.log:hover {
+        opacity: 0.4;
+}
+
+
+a:focus, a:hover, a:active, a:visited {
+    text-decoration: none;
+    outline: none;
+}
 @media only screen and (min-width: 768px) {
 
     .notvisible_inminiscrin {
