@@ -184,9 +184,8 @@ margin-right: 20px;
 
 <script>
 function urlCheck() {
-    if (
-        window.location.href.indexOf == 'index-ru'
-    ) {
+    if(window.location.href.indexOf("index-ru") > -1) 
+    {
         document.getElementsByClassName('wrap')[0].innerHTML = '11111';
     } else {document.getElementsByClassName('wrap')[0].innerHTML = '2222';}
 }
