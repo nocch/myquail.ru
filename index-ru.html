@@ -184,13 +184,11 @@ margin-right: 20px;
 
 <script>
 function urlCheck() {
-if(
-window.location.href=="/index-ru.html"
-)
-{
-document.getElementsByClassName('wrap')[0].innerHTML = '11111';
-}else{
-}
+    if (
+        window.location.href == '/index-ru.html'
+    ) {
+        document.getElementsByClassName('wrap')[0].innerHTML = '11111';
+    } else {document.getElementsByClassName('wrap')[0].innerHTML = '2222';}
 }
 urlCheck();
 </script>
